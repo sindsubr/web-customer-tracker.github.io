@@ -24,10 +24,10 @@ public class CustomerAspect {
 //			.filename(".env")
 //			.load(); // instead of '.env', use 'env'
 
-	public final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
-	public final String AUTH_TOKEN = dotenv.get("TWILIO_AUTH_TOKEN");
-	public final String TWILIO_TO_WHATSAPP_NUMBER = dotenv.get("TWILIO_TO_WHATSAPP_NUMBER");
-	public final String TWILIO_FROM_WHATSAPP_NUMBER = dotenv.get("TWILIO_FROM_WHATSAPP_NUMBER");
+	public final String ACCOUNT_SID = System.getProperty("TWILIO_ACCOUNT_SID");
+	public final String AUTH_TOKEN =  System.getProperty("TWILIO_AUTH_TOKEN");
+	public final String TWILIO_TO_WHATSAPP_NUMBER =  System.getProperty("TWILIO_TO_WHATSAPP_NUMBER");
+	public final String TWILIO_FROM_WHATSAPP_NUMBER =  System.getProperty("TWILIO_FROM_WHATSAPP_NUMBER");
 
 	@Before("execution(* org.springmvcdb.crm.service.CustomerServiceImpl.deleteCustomer(int))")
 	public void deleteCustomerAdvice(JoinPoint joinPoint) {
