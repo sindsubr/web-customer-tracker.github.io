@@ -19,10 +19,10 @@ public class CustomerAspect {
 
 	private Logger logger = Logger.getLogger(getClass().getName());
 
-	Dotenv dotenv = Dotenv.configure()
+	Dotenv dotenv = Dotenv.load();
 //			.directory("/assets")
 //			.filename(".env")
-			.load(); // instead of '.env', use 'env'
+//			.load(); // instead of '.env', use 'env'
 
 	public final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
 	public final String AUTH_TOKEN = dotenv.get("TWILIO_AUTH_TOKEN");
