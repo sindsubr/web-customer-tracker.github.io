@@ -21,7 +21,7 @@ public class CustomerAspect {
 
 	Dotenv dotenv = Dotenv.configure()
 //			.directory("/assets")
-			.filename(".env")
+//			.filename(".env")
 			.load(); // instead of '.env', use 'env'
 
 	public final String ACCOUNT_SID = dotenv.get("TWILIO_ACCOUNT_SID");
