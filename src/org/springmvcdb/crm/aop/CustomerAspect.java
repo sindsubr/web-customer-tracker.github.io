@@ -19,7 +19,7 @@ public class CustomerAspect {
 
 	private Logger logger = Logger.getLogger(getClass().getName());
 
-	Dotenv dotenv = Dotenv.configure().systemProperties().load();
+//	Dotenv dotenv = Dotenv.configure().systemProperties().load();
 //			.directory("/assets")
 //			.filename(".env")
 //			.load(); // instead of '.env', use 'env'
